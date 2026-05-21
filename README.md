@@ -1,16 +1,38 @@
-# React + Vite
+# Mazda RX-7 732-X Attack — Showcase Site
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A showcase site for the RX-7 732-X, a heavily modified 
+circuit machine built as an Assetto Corsa mod. Built with React, 
+Vite, and Framer Motion.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Scroll-based animations**: Framer Motion scroll-triggered transitions
+- **Custom hooks**: useScrollY and useInView for animation control
+- **Performance specs display**: Full technical breakdown of the 732-X
+- **Aero section**: Wing configuration and downforce details
+- **Provenance section**: Build history and modification overview
 
-## React Compiler
+## Built With
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **React** (component-based UI)
+- **Vite** (build tool and dev server)
+- **Framer Motion** (scroll animations and transitions)
 
-## Expanding the ESLint configuration
+## Status
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+🚧 Work in progress — car renders and API integration incoming
+
+Planned features:
+- OpenF1 API lap time comparison
+- Recharts data visualization
+- Aero configurator
+
+## Live Site
+
+[Coming soon]
+
+## About the Car
+
+The RX-7 732-X is a rear 4-rotor circuit machine built on a Mazda 
+RX-7 GT300 base. 953whp, 825kg, 8-speed sequential, 11,000rpm 
+limiter. This site is its digital home.
