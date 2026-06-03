@@ -10,7 +10,7 @@ const cars = [
   {
     id: 1,
     name: '732X Definite',
-    image: '/CAR_MODEL_2.png', // REPLACE WITH YOUR NEW MODEL IMAGE
+    image: '/Definite.png', // REPLACE WITH YOUR NEW MODEL IMAGE
   },
 ];
 
@@ -25,7 +25,7 @@ const specs = [
 
 function Specs() {
   const sectionRef = useRef(null);
-  const isInView = useInView(sectionRef, { once: true, amount: 0.2 });
+  const isInView = useInView(sectionRef, { once: false, amount: 0.2 });
   const [currentCar, setCurrentCar] = useState(0);
   const [direction, setDirection] = useState(1); // 1 = right, -1 = left
 
@@ -52,7 +52,7 @@ function Specs() {
   return (
     <section
       ref={sectionRef}
-      className="relative w-full min-h-screen bg-black flex flex-col justify-center px-16 py-20"
+      className="relative w-full min-h-screen flex flex-col justify-center px-16 py-20"
       id="specs"
     >
       {/* Section Header */}

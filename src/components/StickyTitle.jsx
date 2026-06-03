@@ -6,9 +6,9 @@ function StickyTitle() {
 
   const vh = typeof window !== 'undefined' ? window.innerHeight : 800;
 
-  const x = useTransform(scrollY, [0, vh], ['0%', '-100%']);
+  const x = useTransform(scrollY, [0, vh], ['0%', '-170%']);
   const y = useTransform(scrollY, [0, vh], ['0%', '-420%']);
-  const scale = useTransform(scrollY, [0, vh], [1, 0.7]);
+  const scale = useTransform(scrollY, [0, vh], [1, 0.6]);
 
   // Fades out as you leave Overview heading into Specs
   const titleOpacity = useTransform(scrollY, [vh, vh * 1.5], [1, 0]);
@@ -20,7 +20,7 @@ function StickyTitle() {
       style={{ x, y, scale, opacity: titleOpacity }}
     >
       <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-2">
-        Mazda RX-7 <span className="text-rx-red">732X Attack</span>
+        Mazda RX-7 <span className="text-rx-red">732X</span>
       </h1>
       <motion.p
         className="text-base md:text-lg lg:text-xl font-light"

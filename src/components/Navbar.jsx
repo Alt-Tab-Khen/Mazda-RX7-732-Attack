@@ -24,11 +24,22 @@ function Navbar() {
   }, [lastScrollY]);
 
   return (
+    <>  
+    {/* Invisible hover trigger at top of screen */}
+      <div
+        className="fixed top-0 left-0 w-full h-20 z-[999]"
+        onMouseEnter={() => setIsVisible(true)}
+      />
     <nav
+      onMouseEnter={() => setIsVisible(true)}
+      onMouseLeave={() => {
+       if (window.scrollY > 100) setIsVisible(false);
+      }}
       className={`fixed top-0 left-0 w-full flex items-center justify-start gap-16 px-16 py-5 z-[1000] bg-gradient-to-b from-black/80 via-black/60 to-transparent backdrop-blur-md transition-transform duration-300 ${
         isVisible ? 'translate-y-0' : '-translate-y-full'
       }`}
     >
+    
       {/* rest of navbar code stays the same */}
       <div className="w-12 h-12">
         <img src="/LOGO R.png" alt="Logo" className="w-full h-full object-contain" />
@@ -46,8 +57,8 @@ function Navbar() {
           </a>
         </li>
         <li>
-          <a href="#aero" className="text-white no-underline text-lg font-medium transition-colors hover:text-rx-red">
-            Aero
+          <a href="#difference" className="text-white no-underline text-lg font-medium transition-colors hover:text-rx-red">
+            Difference
           </a>
         </li>
         <li>
@@ -57,6 +68,7 @@ function Navbar() {
         </li>
       </ul>
     </nav>
+    </>
   );
 }
 
